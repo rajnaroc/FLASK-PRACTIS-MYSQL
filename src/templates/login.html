@@ -4,7 +4,13 @@
     <nav>
     </nav>
     <main>
-        <span>login</span>
+        <form action="/register" methods="POST">            
+            <h1>Login</h1>
+            <input type="text" name="email" placeholder="Escribe tu email">
+            <input type="text" name="password" placeholder="Escribe tu nombre">
+            <p>No tienes cuenta?<a href="/register">Registrase</a></p>
+            <button type="submit">enviar</button>
+        </form>
     </main>
 </header>
 

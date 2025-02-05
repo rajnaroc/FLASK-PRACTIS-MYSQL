@@ -5,6 +5,16 @@
     </nav>
     <main>
         <span>Productos</span>
+        {% for products in products %}
+            <div id="cont_products">
+                <img src="{{ products.3}}" alt="foto products">
+                <div class="nombre_precio">
+                    <span>{{ products.1}}</span>
+                    <span>{{ products.2}}</span>
+                </div>
+            </div>
+            <a href="/agregar_fav/{{products.0 }}">Favoritos</a>
+        {% endfor %}
     </main>
 </header>
 
