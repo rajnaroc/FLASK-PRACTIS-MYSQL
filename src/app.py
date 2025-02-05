@@ -27,7 +27,7 @@ def login():
 
 @app.route('/register', methods=['GET','POST'])
 def register():
-    pass
+    return render_template('register.html')
 
 @app.route('/users', methods=['GET'])
 def users():
