@@ -1,0 +1,2 @@
+Crear secret_key:
+1- python -c "import secrets; print(secrets.token_hex(16))"
