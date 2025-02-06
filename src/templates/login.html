@@ -3,12 +3,19 @@
 <header>
     <nav>
     </nav>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     <main>
-        <form action="/register" methods="POST">
+        <form action="/login" method="POST">
             <a href="/">Inicio</a>            
             <h1>Login</h1>
-            <input type="text" name="email" placeholder="Escribe tu email">
-            <input type="text" name="password" placeholder="Escribe tu nombre">
+            <input type="email" name="email" placeholder="Escribe tu email">
+            <input type="password" name="password" placeholder="Escribe tu contraseña">
             <p>No tienes cuenta?<a href="/register">Registrase</a></p>
             <button type="submit">enviar</button>
         </form>
